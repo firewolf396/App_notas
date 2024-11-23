@@ -1,0 +1,41 @@
+/* Reset básico de márgenes y rellenos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Estilo de los enlaces */
+a {
+    text-decoration: none; /* Remueve el subrayado por defecto */
+    color: #fff; /* Color del texto */
+    background-color: #007BFF; /* Fondo azul */
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto al pasar el ratón sobre los enlaces */
+a:hover {
+    background-color: #0056b3; /* Fondo más oscuro cuando se pasa el ratón */
+    transform: translateY(-3px); /* Efecto de "elevación" */
+}
+
+/* Títulos y texto principal */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}

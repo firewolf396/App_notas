@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Estudiantes</title>
+    <link rel="stylesheet" href="css/ES.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Estudiantes</h1>
+        <a href="index.html">Volver</a>
+        <!-- Sección para listar estudiantes -->
+        <section>
+            <h2>Lista de Estudiantes</h2>
+            <div id="student-summary">
+                <p>Estudiantes aprobados: <span id="approved-count">0</span></p>
+                <p>Estudiantes perdieron: <span id="failed-count">0</span></p>
+                <p>Estudiantes sin notas: <span id="no-notes-count">0</span></p>
+            </div>
+
+            <div class="filter-section">
+                
+                <button id="btn-filter">Filtrar</button>
+                <button id="btn-refresh">Actualizar Lista</button>
+            </div>
+
+            <table id="students-table">
+                
+                <input type="text" id="filter-input" placeholder="Buscar por código, nombre, email, estado...">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Nota Definitiva</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se insertarán dinámicamente los estudiantes -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección para registrar estudiantes -->
+        <section>
+            <h2>Registrar Estudiante</h2>
+            <form id="register-form">
+                <input type="text" id="register-code" placeholder="Código" required>
+                <input type="text" id="register-name" placeholder="Nombre" required>
+                <input type="email" id="register-email" placeholder="Correo Electrónico" required>
+                <button type="submit">Registrar</button>
+            </form>
+            <div id="register-errors"></div>
+        </section>
+
+        <!-- Sección para actualizar estudiantes -->
+        <section>
+            <h2>Actualizar Estudiante</h2>
+            <form id="update-form">
+                <input type="text" id="update-code" placeholder="Código" required>
+                <input type="text" id="update-name" placeholder="Nombre" required>
+                <input type="email" id="update-email" placeholder="Correo Electrónico" required>
+                <button type="submit">Actualizar</button>
+            </form>
+            <div id="update-errors"></div>
+        </section>
+    </div>
+
+    <script src="js/ES.js"></script>
+</body>
+</html>

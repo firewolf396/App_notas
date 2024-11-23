@@ -1,0 +1,61 @@
+### Obtener todos los estudiantes:
+GET http://localhost:8000/api/estudiantes
+
+### Obtener informacion de un estudiante específico:
+GET http://localhost:8000/api/estudiantes/(codigo)
+
+
+### Crear un nuevo un estudiante
+POST http://localhost:8000/api/estudiantes
+Content-Type: "application/json"
+
+{
+  "cod": "000001",
+  "email": "estudiante@correo.com",
+  "nombres": "Alex Marin"
+}
+
+### Actualizar un estudiante
+PUT http://localhost:8000/api/estudiantes/(codigo)
+Content-Type: "application/json"
+
+{
+  "cod": "123456",
+  "email": "nuevo_correo@correo.com",
+  "nombres": "Alex Marin Actualizado"
+}
+
+### Eliminar un estudiante:
+DELETE http://localhost:8000/api/estudiantes/(codigo)
+
+### Filtrar estudiantes:
+GET http://localhost:8000/api/estudiantes/filter
+
+
+
+### Obtener todas las notas de un estudiante:
+GET http://localhost:8000/api/notas/(codigo)
+
+
+### Crear una nota:
+POST http://localhost:8000/api/notas/(codigo)
+
+Content-Type: "application/json"
+
+{
+  "actividad": "Parcial",
+  "nota": 4.5
+}
+
+### Actualizar una nota:
+PUT http://localhost:8000/api/notas/(codigo_nota)
+
+Content-Type: "application/json"
+
+{
+  "actividad": "Parcial Final",
+  "nota": 3.8
+}
+
+### Eliminar una nota:
+DELETE http://localhost:8000/api/notas/(codigo_nota)

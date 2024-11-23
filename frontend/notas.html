@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Notas</title>
+    <link rel="stylesheet" href="css/Notas.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Notas de Estudiantes</h1>
+    </header>
+    <div id="student-search">
+        <h2>Buscar Estudiante</h2>
+        <label for="input-student-code">Ingrese el código del estudiante:</label>
+        <input type="number" id="input-student-code" placeholder="Código del estudiante">
+        <button id="search-student">Buscar</button>
+
+        <a href="index.html">Volver</a>
+
+
+    </div>
+
+    <div id="notes-section" style="display: none;">
+        <h2>Información del Estudiante</h2>
+        <p><strong>Código:</strong> <span id="student-code"></span></p>
+        <p><strong>Nombre:</strong> <span id="student-name">Nombre del estudiante</span></p>
+        <p><strong>Email:</strong> <span id="student-email">Email del estudiante</span></p>
+        <p><strong>Estado:</strong> <span id="student-status">No determinado</span></p>
+        <p><strong>Promedio:</strong> <span id="student-average">0.00</span></p>
+        <a href="index.html">Volver</a>
+        <h3>Listado de Notas</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Actividad</th>
+                    <th>Nota</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="notes-list"></tbody>
+        </table>
+
+        
+        <h3>Editar Nota</h3>
+        <form id="id-note-form">
+            <label for="edit-note-activity">Actividad:</label>
+         <input type="text" id="new-note-activity" required> <!-- Cambié el ID -->
+            <label for="note-grade">Nota:</label>
+            <input type="number" id="new-note-grade" min="0" max="5" step="0.01" required> <!-- Cambié el ID -->
+
+            <button type="submit" id="save-note-btn">Guardar</button> <!-- Cambié el ID del botón -->
+        </form>
+
+
+        <h3>Agregar nota</h3>
+        <form id="note-form">
+            <label for="note-activity">Actividad:</label>
+            <input type="text" id="note-activity" required>
+            <label for="note-grade">Nota:</label>
+            <input type="number" id="note-grade" min="0" max="5" step="0.01" required>
+            <button type="submit">Guardar</button>
+        </form>
+        
+
+        <h3>Resumen</h3>
+        <p>Notas por debajo de 3: <span id="below-three">0</span></p>
+        <p>Notas mayores o iguales a 3: <span id="above-three">0</span></p>
+    </div>
+
+    <script src="js/Notas.js"></script>
+</body>
+</html>
